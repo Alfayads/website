@@ -1,14 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Jockey_One, Noto_Serif_Balinese } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
+import ThemeToggle from "../components/ThemeToggle";
+import Lottie from "lottie-react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+
+const jockeyOne = Jockey_One({
+  variable: "--font-jockey-one",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoSerifBalinese = Noto_Serif_Balinese({
+  variable: "--font-noto-serif-balinese",
   subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata = {
@@ -18,11 +25,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jockeyOne.variable} ${notoSerifBalinese.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          
+          <div className="absolute top-4 right-4">
+            <ThemeToggle />
+          </div>
+          {children}
+        </Providers>
       </body>
     </html>
   );
