@@ -37,7 +37,7 @@ const AboutSection = () => {
 />
         </div>
         <p className='text-2xl text-left tracking-wider'>
-            I am a passionate web developer with a focus on creating dynamic and responsive web applications. My journey in web development began with a fascination for how websites work, and it has since evolved into a full-fledged career. I enjoy tackling complex problems and finding elegant solutions through code. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.
+            I am a passionate web developer with a focus on creating dynamic and responsive web applications. My journey in web development began with a fascination for how websites work, and it has since evolved into a full-fledged career. I enjoy tackling complex problems and finding elegant solutions through code. When I&apos;m not coding, you can find me exploring new technologies or contributing to open-source projects.
         </p>
       </div>
 
